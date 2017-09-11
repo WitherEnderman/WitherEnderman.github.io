@@ -21,7 +21,7 @@ function(module, exports, __webpack_require__) {
 	
 	    // typed.js啪啪啪啪
 	    $(".typed a").typed({
-	        strings: ["丹","...", "DanDanDanWang"],
+	        strings: ["雅卓","I love U", "from Drgonfirefirefire"],
 	        typeSpeed: 39,
 	        backSpeed: 7,
 	        backDelay: 699
