@@ -1,0 +1,208 @@
+/*--------------------------------------------------------------
+Hero section
+--------------------------------------------------------------*/
+
+
+	.slides-container .slide-item {
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+
+	.text-slider .maintitle,
+	.text-slider .subtitle {
+		z-index: 10;
+		color: #fff;
+		margin: 0;
+		letter-spacing: 1px;
+		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	}
+	.text-slider .maintitle {
+		position: relative;
+		display: inline-block;
+		font-size: 57px;
+		line-height: 67px;
+		font-weight: 700;
+		padding-bottom: 10px;
+	}
+	.text-slider .maintitle:after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		width: 40%;
+		height: 1px;
+		margin-left: -20%;
+	}
+	.text-slider .subtitle {
+		font-size: 30px;
+		line-height: 40px;
+		padding: 20px 0 50px;
+		font-weight: 300;
+	}
+.text-slider {
+  position: relative;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+@-webkit-keyframes fadeInRightBig {
+  from {
+    right: -1200px;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes fadeInRightBig {
+  from {
+    right: -1200px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes fadeInLeftBig {
+  from {
+    right: 1200px;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes fadeInLeftBig {
+  from {
+    right: 1200px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.slide-inner {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 2;
+	width: 100%;
+	min-height: 260px;
+	padding-top: 5px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.header-slider {
+	overflow: hidden;
+}
+
+/* Button
+-------------------------------------------------------------- */
+	.roll-button {
+		position: relative;
+		display: inline-block;
+		font-family: "Raleway", sans-serif;
+		font-size: 13px;
+		line-height: 24px;
+		font-weight: 700;
+		padding: 12px 35px;
+		color: #fff;
+		text-transform: uppercase;
+		-webkit-border-radius: 3px;
+		   -moz-border-radius: 3px;
+			 -o-border-radius: 3px;
+				border-radius: 3px;
+		-webkit-transition: all 0.3s;
+		   -moz-transition: all 0.3s;
+		    -ms-transition: all 0.3s;
+		     -o-transition: all 0.3s;
+		        transition: all 0.3s;
+	}
+	.roll-button:hover {
+		background-color: transparent;
+	}
+
+/* Elements
+-------------------------------------------------------------- */
+	a {
+		color: #d65050;
+		text-decoration:none;
+	}
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		color: #d65050;
+	}
+
+	.text-slider .maintitle:after {
+		background-color: #d65050;
+	}
+
+	.roll-button {
+		background-color: #d65050;
+		border: 1px solid #d65050;
+	}
+	.roll-button:hover {
+		color: #d65050;
+	}
+
+
+/* Media Queries
+-------------------------------------------------------------- */
+	@media only screen and (min-width: 1930px) {
+		.parallax {
+			background-size: cover;
+		}
+	}
+	/* Smaller than standard 1200 */
+
+
+	/* All Mobile Sizes */
+
+
+	/* Mobile Portrait Size */
+	@media only screen and (max-width: 479px) {
+
+		.blog-post,
+		.service,
+		.sidebar-column {
+			padding: 0;
+		}
+		.roll-button {
+			font-size: 12px;
+		}
+		.text-slider .maintitle {
+			font-size: 18px;
+		}
+		.text-slider .subtitle {
+			font-size: 14px;
+		}
+		.text-slider {
+			margin-bottom: 5px;
+		}
+		.text-slider .subtitle {
+			padding: 5px 0;
+		}
+		.button-slider {
+    		padding: 5px 15px;
+    		font-size: 11px;
+		}
+	}
+	@media only screen and (max-width: 320px) {
+		.text-slider {
+			margin-bottom: 0;
+		}
+
+	}
+
+	/* Mobile slider */
+	.mobile-slide {
+		display: none;
+	}
