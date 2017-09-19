@@ -256,8 +256,10 @@ body {
 </style>
     <script src="js/prefixfree.min.js"></script>
 </head>
-<body>
+<body onload="init()">
 <audio src="opener.mp3" autoplay="autoplay" loop="loop"></audio>
+
+<div class="z-text" style="position:absolute;width:100%;">
 <header id="header">
 <br/><br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp你～<br/>
 ～<span class="pia">美丽贤淑</span><br/>～～<span class="pia">楚楚动人</span><br/>～～～<span class="pia">气若幽兰</span><br/>～～～～<span class="pia">倾国倾城</span><br/>～～～～～<span class="pia">闭月羞花</span><br/>～～～～～～<span class="pia">大家闺秀</span><br/>～～～～～～～<span class="pia">小家碧玉</span><br/>～～～～～～～～<span class="pia">温柔善良</span><br/>～～～～～～～～～<span class="pia">亭亭玉立</span><br/>～～～～～～～～～～<span class="pia">小巧玲珑</span><br/>～～～～～～～～～～～<span class="pia">丰满韵味</span><br/>～～～～～～～～～～～～<span class="pia">骨感窈窕</span><br/>～～～～～～～～～～～～～<span class="pia">婀娜多姿</span><br/>～～～～～～～～～～～～～～<span class="pia">国色天香</span><br/>～～～～～～～～～～～～～～～<span class="pia">风姿卓越</span><br/>～～～～～～～～～～～～～～～～<span class="pia">顾盼流转</span><br/>～～～～～～～～～～～～～～～～～<span class="pia">清丝纠缠</span><br/>～～～～～～～～～～～～～～～～～～<span class="pia">举步轻摇</span><br/>～～～～～～～～～～～～～～～～～～～<span class="pia">艳冠群芳</span><br/>～～～～～～～～～～～～～～～～～～～～<span class="pia">剪水双瞳</span><br/>～～～～～～～～～～～～～～～～～～～～～<span class="pia">翩若惊鸿</span><br/>～～～～～～～～～～～～～～～～～～～～～～<span class="pia">婉若游龙</span><br/>～～～～～～～～～～～～～～～～～～～～～～～<span class="pia">肩若削成</span><br/>～～～～～～～～～～～～～～～～～～～～～～～～<span class="pia">腰如约素</span><br/>～～～～～～～～～～～～～～～～～～～～～～～～～<span class="pia">延颈秀项</span><br/>～～～～～～～～～～～～～～～～～～～～～～～～～～<span class="pia">皓质呈露</span><br/>～～～～～～～～～～～～～～～～～～～～～～～～～～～<span class="pia">芳泽无加</span><br/>～～～～～～～～～～～～～～～～～～～～～～～～～～～～<span class="pia">铅华弗御</span><br/>～～～～～～～～～～～～～～～～～～～～～～～～～～～～～<span class="pia">云髻峨峨</span><br/>～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～<span class="pia">修眉联娟</span><br/>
@@ -285,10 +287,149 @@ body {
     <div id="bottom">forever ❤</div>
   </div>
 </div>
-<div style="text-align:center;clear:both">
+<div style="text-align:center;clear:both"></div></div>
+	
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript" src="js/ThreeCanvas.js"></script>
+	<script type="text/javascript" src="js/Snow.js"></script>
+	
+		<script>
+
+			var SCREEN_WIDTH = window.innerWidth;
+			var SCREEN_HEIGHT = window.innerHeight*2.5;
+
+			var container;
+
+			var particle;
+
+			var camera;
+			var scene;
+			var renderer;
+
+			var mouseX = 0;
+			var mouseY = 0;
+
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+			
+			var particles = []; 
+			var particleImage = new Image();
+			particleImage.src = 'img/ParticleSmoke.png'; 
+
+		
+		
+			function init() {
+
+				container = document.createElement('div');
+				document.body.appendChild(container);
+
+				camera = new THREE.PerspectiveCamera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+				scene.add(camera);
+					
+				renderer = new THREE.CanvasRenderer();
+				renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+				var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
+					
+				for (var i = 0; i < 500; i++) {
+
+					particle = new Particle3D( material);
+					particle.position.x = Math.random() * 2000 - 1000;
+					particle.position.y = Math.random() * 2000 - 1000;
+					particle.position.z = Math.random() * 2000 - 1000;
+					particle.scale.x = particle.scale.y =  1;
+					scene.add( particle );
+					
+					particles.push(particle); 
+				}
+
+				container.appendChild( renderer.domElement );
+
+	
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+				
+				setInterval( loop, 1000 / 60 );
+				
+			}
+			
+			function onDocumentMouseMove( event ) {
+
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+			}
+
+			function onDocumentTouchStart( event ) {
+
+				if ( event.touches.length == 1 ) {
+
+					event.preventDefault();
+
+					mouseX = event.touches[ 0 ].pageX - windowHalfX;
+					mouseY = event.touches[ 0 ].pageY - windowHalfY;
+				}
+			}
+
+			function onDocumentTouchMove( event ) {
+
+				if ( event.touches.length == 1 ) {
+
+					event.preventDefault();
+
+					mouseX = event.touches[ 0 ].pageX - windowHalfX;
+					mouseY = event.touches[ 0 ].pageY - windowHalfY;
+				}
+			}
+
+
+			function loop() {
+
+			for(var i = 0; i<particles.length; i++)
+				{
+
+					var particle = particles[i]; 
+					particle.updatePhysics(); 
+	
+					with(particle.position)
+					{
+						if(y<-1000) y+=2000; 
+						if(x>1000) x-=2000; 
+						else if(x<-1000) x+=2000; 
+						if(z>1000) z-=2000; 
+						else if(z<-1000) z+=2000; 
+					}				
+				}
+			
+				camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+				camera.lookAt(scene.position); 
+
+				renderer.render( scene, camera );
+
+				
+			}
+
+		</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
 <script src="/follow.js" type="text/javascript"></script>
-</div>
   <script src='js/jquery.js'></script>
   <script src='js/jquery.lettering.js'></script>
   <script src="js/index.js"></script>
