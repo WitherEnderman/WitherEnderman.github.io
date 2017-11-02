@@ -131,6 +131,31 @@ Hero section
 		background-color: transparent;
 	}
 
+	.roll-button1b {
+		position: relative;
+		display: inline-block;
+		font-family: "Raleway", sans-serif;
+		font-size: 13px;
+		line-height: 24px;
+		font-weight: 700;
+		padding: 12px 35px;
+		color: #fff;
+		text-transform: uppercase;
+		-webkit-border-radius: 3px;
+		   -moz-border-radius: 3px;
+			 -o-border-radius: 3px;
+				border-radius: 3px;
+		-webkit-transition: all 0.3s;
+		   -moz-transition: all 0.3s;
+		    -ms-transition: all 0.3s;
+		     -o-transition: all 0.3s;
+		        transition: all 0.3s;
+	}
+	.roll-button:hover {
+		background-color: transparent;
+	}
+
+
 /* Elements
 -------------------------------------------------------------- */
 	a {
@@ -153,6 +178,16 @@ Hero section
 		color: #d65050;
 	}
 
+/*------------------------------------------------------------- */
+
+
+	.roll-button1b {
+		background-color: blue;
+		border: 1px solid blue;
+	}
+	.roll-button1b:hover {
+		color: blue;
+	}
 
 /* Media Queries
 -------------------------------------------------------------- */
