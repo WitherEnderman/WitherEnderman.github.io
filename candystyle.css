@@ -1,0 +1,331 @@
+body,h1,h2,p,ul {
+	margin: 0;
+}
+
+body {
+	color: #00BFFF;
+	font-family: "Source Han Sans", "Source Han Sans SC", "Source Han Sans CN", "Hiragino Sans GB", "Hiragino Sans GB W3", "Lantinghei SC", "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align:center;
+}
+
+h1,h2,h3{
+	font-weight: normal;
+}
+
+p,li{
+	margin-bottom: 10px;
+	line-height: 1.5em;
+}
+
+ul {
+	padding-left: 20px;
+}
+
+a {
+	cursor: pointer;
+	color: #001689;
+}
+
+a:hover{
+	color: #0082CA;
+}
+
+.clear:after {
+	content: '.';
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+	clear: both;
+	display: block;
+}
+
+#top-menu{
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	color: #FFF;
+	background-color: #001689;
+	/*border-bottom: 1px solid #001689;*/
+	z-index: 3;
+	opacity: 0.9;
+}
+
+#menu-logo{
+	float:left;
+	margin-top: 10px;
+	height: 40px;
+	width: 113px;
+	background-size: 100%;
+	background-image: url('img/jinkan_logo_hori_white.png');
+	background-repeat: no-repeat;
+}
+
+#top-menu ul{
+	float: right;
+	list-style-type: none;
+}
+
+#top-menu li{
+	padding:0 10px;
+	line-height: 60px;
+	float: left;
+	transition: background-color .5s;
+	-moz-transition: background-color .5s;
+	-webkit-transition: background-color .5s;
+}
+
+#top-menu li a{
+	color: #FFF;
+}
+
+#top-menu li.highlight{
+	background-color: #6b7dd6;
+}
+
+#top-bg{
+	position: fixed;
+	width: 108%;
+	height: 900px;
+	background-size: auto 103%;
+	background-color: #001689;
+	background-image: url('tokyo.jpg');
+	background-repeat: no-repeat;
+}
+
+#top-logo{
+	position: relative;
+	top:10%;
+	margin: 0 auto;
+	height: 170px;
+	width: 100px;
+	background-size: 100%;
+	background-image: url('img/jinkan_logo_vert_white.png');
+	background-repeat: no-repeat;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+
+#top-fake-slogan{
+	position: relative;
+	top:15%;
+	margin:0 auto;
+	height: 48px;
+	width: 480px;
+	background-size: 100%;
+	background-image: url('img/fake-slogan.png');
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	cursor:pointer;
+}
+
+#container {
+	background: #FFF;
+	opacity: 0.5;
+	position: relative;
+	top:1200px;
+	width: 100%;
+	z-index: 2;
+}
+
+#wave {
+	width: 100%;
+	position: relative;
+	top:-50px;
+	overflow-x:hidden;
+}
+
+#wave-svg-1 {
+	position: relative;
+	left:-50px;
+	width: 4000px;
+	height: 50px;
+	display: block;
+	animation: wave-move 7s infinite ease-in-out alternate;
+	-webkit-animation: wave-move 7s infinite ease-in-out alternate;
+}
+
+#wave-svg-2 {
+	position: relative;
+	top:-50px;
+	left:-50px;
+	width: 4500px;
+	height: 50px;
+	display: block;
+	animation: wave-move 10s -5s infinite ease-in-out alternate;
+	-webkit-animation: wave-move 10s -5s infinite ease-in-out alternate;
+}
+
+@keyframes wave-move{
+	from {
+		transform: translate3D(0,0,0);
+	}
+	to {
+		transform: translate3D(-800px,0,0);
+	}
+}
+
+@-webkit-keyframes wave-move{
+	from {
+		-webkit-transform: translate3D(0,0,0);
+	}
+	to {
+		-webkit-transform: translate3D(-800px,0,0);
+	}
+}
+
+#wave-path-1 {
+	stroke: none;
+	fill: white;
+}
+
+#wave-path-2 {
+	stroke: none;
+	fill: white;
+	opacity: 0.65;
+}
+
+.container-middle {
+	margin: 0 auto;
+}
+
+.container-middle.wide{
+	width: 960px;
+}
+
+.h1-group{
+	border-bottom: 1px solid #001689;
+	padding-bottom: 20px;
+}
+
+.h2-group{
+	float:left;
+	width: 300px;
+	min-height: 100px;
+	margin: 0 10px;
+	/*border-right: 1px solid;*/
+	padding-right: 10px;
+}
+
+.quote{	text-align: center;
+	/*border-bottom: 1px solid #001689;*/
+	margin-bottom:60px;
+	font-weight:300;
+	font-style:italic;
+	font-size:0.85em;
+	color: #939ac0;
+}
+
+.quote p{
+	margin-bottom: 0;
+	line-height: 60px;
+}
+
+.item article{
+	float:left;
+	margin-top:6px;
+}
+
+.avatar {
+	border:1px solid #eee;
+	padding:2px;
+}
+
+h1,h2{
+	text-align: center;
+}
+
+h1{
+	font-size: 2.4em;
+	/*line-height: 2em;*/
+}
+
+.h2-group img{
+	float:right;
+}
+
+h2{
+	width: 300px;
+	float:right;
+	text-align: right;
+	line-height: 1.8em;
+}
+
+h1.subtitle,
+h2.subtitle{
+	color: #6b7dd6;
+	/*color:#0082ca;*/
+}
+
+h1.subtitle{
+	font-size:1em;
+	text-transform: uppercase;
+	line-height: 1.8em;
+}
+h2.subtitle{
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+.item {
+	width:100%;
+	min-height: 100px;
+	float:left;
+	margin-bottom: 50px;
+}
+
+.secret {
+	text-transform: uppercase;
+}
+
+#projects{
+	margin-top: 50px;
+}
+
+#members img{
+	margin-bottom: 10px
+}
+
+#bottom-holder {
+	position: relative;
+	top: 360px;
+	height: 200px;
+	z-index: -1;
+}
+
+#bottom-bg{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 200px;
+	background-color: #001689;
+	background: -webkit-gradient(linear, left top, right bottom, from(#00BFFF), to(#FF82AB));
+	background: -moz-linear-gradient(-45deg, #00BFFF, #FF82AB);
+}
+
+#bottom-bg,
+#bottom-bg a{
+	color:white;
+}
+
+#bottom-bg p{
+	position: relative;
+	top:70px;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 12px;
+}
+
+#bottom-logo{
+	position: relative;
+	top:40px;
+	margin: 0 auto;
+	height: 45px;
+	width: 128px;
+	background-size: 100%;
+	background-image: url('img/jinkan_logo_hori_white.png');
+	background-repeat: no-repeat;
+}
+
+#links li small:before {
+	content: '>> '
+}
