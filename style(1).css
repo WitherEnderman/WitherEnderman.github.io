@@ -230,31 +230,31 @@ Hero section
 
 
 	.roll-button1b {
-		background-color: blue;
-		border: 1px solid blue;
+		background-color: #CA8EC2;
+		border: 1px solid #CA8EC2;
 	}
 	.roll-button1b:hover {
-		color: blue;
+		color: #CA8EC2;
 	}
 /*------------------------------------------------------------- */
 
 
 	.roll-button2b {
-		background-color: black;
-		border: 1px solid black;
+		background-color: #FF359A;
+		border: 1px solid #FF359A;
 	}
 	.roll-button2b:hover {
-		color: black;
+		color: #FF359A;
 	}
 /*------------------------------------------------------------- */
 
 
 	.roll-button3b {
-		background-color: pink;
-		border: 1px solid pink;
+		background-color: #00FFFF;
+		border: 1px solid #00FFFF;
 	}
 	.roll-button3b:hover {
-		color: pink;
+		color: #00FFFF;
 	}
 
 /* Media Queries
