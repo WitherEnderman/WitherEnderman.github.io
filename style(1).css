@@ -155,6 +155,54 @@ Hero section
 		background-color: transparent;
 	}
 
+.roll-button3b {
+		position: relative;
+		display: inline-block;
+		font-family: "Raleway", sans-serif;
+		font-size: 13px;
+		line-height: 24px;
+		font-weight: 700;
+		padding: 12px 35px;
+		color: #fff;
+		text-transform: uppercase;
+		-webkit-border-radius: 3px;
+		   -moz-border-radius: 3px;
+			 -o-border-radius: 3px;
+				border-radius: 3px;
+		-webkit-transition: all 0.3s;
+		   -moz-transition: all 0.3s;
+		    -ms-transition: all 0.3s;
+		     -o-transition: all 0.3s;
+		        transition: all 0.3s;
+	}
+	.roll-button3b:hover {
+		background-color: transparent;
+	}
+
+.roll-button2b {
+		position: relative;
+		display: inline-block;
+		font-family: "Raleway", sans-serif;
+		font-size: 13px;
+		line-height: 24px;
+		font-weight: 700;
+		padding: 12px 35px;
+		color: #fff;
+		text-transform: uppercase;
+		-webkit-border-radius: 3px;
+		   -moz-border-radius: 3px;
+			 -o-border-radius: 3px;
+				border-radius: 3px;
+		-webkit-transition: all 0.3s;
+		   -moz-transition: all 0.3s;
+		    -ms-transition: all 0.3s;
+		     -o-transition: all 0.3s;
+		        transition: all 0.3s;
+	}
+	.roll-button2b:hover {
+		background-color: transparent;
+	}
+
 
 /* Elements
 -------------------------------------------------------------- */
@@ -187,6 +235,26 @@ Hero section
 	}
 	.roll-button1b:hover {
 		color: blue;
+	}
+/*------------------------------------------------------------- */
+
+
+	.roll-button2b {
+		background-color: black;
+		border: 1px solid black;
+	}
+	.roll-button2b:hover {
+		color: black;
+	}
+/*------------------------------------------------------------- */
+
+
+	.roll-button3b {
+		background-color: pink;
+		border: 1px solid pink;
+	}
+	.roll-button3b:hover {
+		color: pink;
 	}
 
 /* Media Queries
