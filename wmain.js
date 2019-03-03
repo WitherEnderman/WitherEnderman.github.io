@@ -21,7 +21,7 @@ function(module, exports, __webpack_require__) {
 	
 	    // typed.js啪啪啪啪
 	    $(".typed a").typed({
-	        strings: ["雅卓","I love U", "Yilia Cheung"],
+	        strings: ["越越","I love U", "平底锅敲宁捞袋"],
 	        typeSpeed: 39,
 	        backSpeed: 7,
 	        backDelay: 699
